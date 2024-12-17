@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["onload","document","body","classList","remove"],"mappings":";;AAAAA,MAAM,GAAG,kBAAM;AACbC,EAAAA,QAAQ,CAACC,IAAT,CAAcC,SAAd,CAAwBC,MAAxB,CAA+B,WAA/B;AACD,CAFD","sourcesContent":["onload = () => {\n  document.body.classList.remove(\"container\");\n};\n\n"],"file":"script.dev.js"}

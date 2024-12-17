@@ -1,0 +1,29 @@
+#img1{
+    width: 70%;
+}
+
+
+#img-grid{
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+#img2{
+    width: 70%;
+    height: 70vh;
+    background-color: #f2f2f2;
+
+}
+
+.header_section{
+    background-color: #159dce;
+}
+
+.info_section{
+    background-color: #159dce !important;
+}
+
+

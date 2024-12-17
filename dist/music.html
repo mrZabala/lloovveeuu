@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Reproductor Musical</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/myCss.css">
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .music_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .player-box {
+      margin-top: 20px;
+    }
+
+    .playlist ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .playlist li {
+      margin: 10px 0;
+    }
+
+    .playlist button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .playlist button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" />
+            <span>
+              Reproductor Musical
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="music.html">Reproductor</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Music Player Section -->
+  <section class="music_section layout_padding">
+    <div class="detail-box">
+      <h2>Reproductor Musical</h2>
+      <p>Selecciona una canción para disfrutar.</p>
+    </div>
+    <div class="player-box">
+      <audio id="audioPlayer" controls preload="auto">
+        <source id="audioSource" src="music/song1.mp3" type="audio/mp3">
+        Tu navegador no soporta el reproductor de audio.
+      </audio>
+
+      <div class="playlist">
+        <h4>Lista de Canciones</h4>
+        <ul>
+          <li><button onclick="changeSong('music/song1.mp3')">Canción 1</button></li>
+          <li><button onclick="changeSong('music/song2.mp3')">Canción 2</button></li>
+          <li><button onclick="changeSong('music/song3.mp3')">Canción 3</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Cambiar la canción
+    function changeSong(songPath) {
+      const audioPlayer = document.getElementById('audioPlayer');
+      const audioSource = document.getElementById('audioSource');
+
+      audioSource.src = songPath;
+      audioPlayer.load();
+      audioPlayer.play();
+    }
+  </script>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>
